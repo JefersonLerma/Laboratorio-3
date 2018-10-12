@@ -5,6 +5,7 @@ public class BSTNode<K extends Comparable<K>,V>{
 	private K key;
 	private V value;
 	
+	
 	private BSTNode p = new BSTNode(null, null);
 	private BSTNode left = new BSTNode(null,null);
 	private BSTNode right = new BSTNode(null,null);
@@ -56,9 +57,7 @@ public class BSTNode<K extends Comparable<K>,V>{
 	public void setValue(V value) {
 		this.value = value;
 	}
-	
-	//Los que son;
-	
+
 	
 	
 	
