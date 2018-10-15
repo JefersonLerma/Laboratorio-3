@@ -1,0 +1,2 @@
+//Nombre, edad, altura, peso, puntos
+Karl Perry, 24, 190, 89,180

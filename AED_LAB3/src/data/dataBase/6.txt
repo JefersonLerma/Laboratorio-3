@@ -1,0 +1,2 @@
+//Nombre, edad, altura, peso, puntos
+Albert Einstain, 41, 182, 86,110

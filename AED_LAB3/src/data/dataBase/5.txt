@@ -1,0 +1,2 @@
+//Nombre, edad, altura, peso, puntos
+Samuel sito, 33, 180, 80,140

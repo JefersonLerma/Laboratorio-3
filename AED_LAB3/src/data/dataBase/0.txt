@@ -1,0 +1,2 @@
+//Nombre, edad, altura, peso, puntos
+Santiago Gonzales, 30, 187, 90,130

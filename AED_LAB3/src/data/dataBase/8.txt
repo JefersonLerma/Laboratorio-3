@@ -1,0 +1,2 @@
+//Nombre, edad, altura, peso, puntos
+Erick Elric, 32, 189, 93,100

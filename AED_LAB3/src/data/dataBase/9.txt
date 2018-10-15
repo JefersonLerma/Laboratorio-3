@@ -1,0 +1,2 @@
+//Nombre, edad, altura, peso, puntos
+Alphonse Elric, 30, 170, 79,190

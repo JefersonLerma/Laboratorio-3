@@ -1,0 +1,2 @@
+//Nombre, edad, altura, peso, puntos
+Pablito Gonzales, 30, 177, 86,102

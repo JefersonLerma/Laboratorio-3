@@ -1,0 +1,2 @@
+//Nombre, edad, altura, peso, puntos
+Susana Oria, 25, 179, 80,230
