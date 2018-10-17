@@ -1,6 +1,6 @@
 package wolrd;
 
-public class RedBlackTree {
+public class TreeBR {
 	
 	
 	

@@ -1,6 +1,6 @@
 package wolrd;
 
-public class RedBlackNode {
+public class NodeBR {
 
 	
 	private int pointer = 0;
