@@ -11,9 +11,9 @@ public interface Tree<K,T> {
 	public void delete(K key);
 	public void delete(NodeBB<K, T> key);
 	public boolean exist(K elemento);
-	public void inOrden(Collection<T> colection);
-	public void posOrden(Collection<T> colection);
-	public void preOrden(Collection<T> colection);
+	public void inOrder(Collection<T> colection);
+	public void posOrder(Collection<T> colection);
+	public void preOrder(Collection<T> colection);
 	public T search(K key);
 	public NodeBB<K,T> getRaiz();
 	public void setRaiz(NodeBB<K,T> nu);
