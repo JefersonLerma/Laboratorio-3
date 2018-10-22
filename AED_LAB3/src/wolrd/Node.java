@@ -10,14 +10,14 @@ public class Node<T> {
 	private T element;
 	private int level;
 
-	public Node(T element, Node<T> padre) {
+	public Node(T element, Node<T> tParent) {
 		this.element = element;
-		this.parent = padre;
+		this.parent = tParent;
 		level=1;
 	}
-	public Node(T element, Node<T> padre,int level) {
+	public Node(T element, Node<T> tParent,int level) {
 		this.element = element;
-		this.parent = padre;
+		this.parent = tParent;
 		this.level=level+1;
 	}
 
@@ -30,30 +30,30 @@ public class Node<T> {
 	}
 
 	@SuppressWarnings("unchecked")
-	public void reccorerPorNivel(Collection<T> coleccion,int level){
+	public void reccorerPorNivel(Collection<T> colection,int level){
 		if(level==1){
-			coleccion.add(element);
+			colection.add(element);
 		}else if(level==2){
-			coleccion=(Collection<T>) sons;
+			colection=(Collection<T>) sons;
 		}else if(level-2==this.level){
 			for (int i = 0; i < sons.size(); i++) {
-				coleccion.addAll((Collection<? extends T>) sons.get(i).sons);
+				colection.addAll((Collection<? extends T>) sons.get(i).sons);
 			}
 		}else{
 			for (int i = 0; i < sons.size(); i++) {
-				sons.get(i).reccorerPorNivel(coleccion, level);
+				sons.get(i).reccorerPorNivel(colection, level);
 			}
 		}
 		
 	}
-	public Node<T> getElement(T elemento) {
-		if (element.equals(elemento)) {
+	public Node<T> getElement(T element) {
+		if (element.equals(element)) {
 			return this;
 		} else {
 			Node<T> ter = null;
 			if (sons != null) {
 				for (int i = 0; i < sons.size() && ter == null; i++) {
-					ter = sons.get(i).getElement(elemento);
+					ter = sons.get(i).getElement(element);
 				}
 			}
 
@@ -69,14 +69,14 @@ public class Node<T> {
 		sons.add(new Node<T>(element, this,level));
 	}
 
-	public Node<T> containsElement(T elemento) {
-		if (element.equals(elemento)) {
+	public Node<T> containsElement(T element) {
+		if (element.equals(element)) {
 			return this;
 		} else {
 			Node<T> ter = null;
 			if (sons != null) {
 				for (int i = 0; i < sons.size() && ter==null; i++) {
-					ter = sons.get(i).containsElement(elemento);
+					ter = sons.get(i).containsElement(element);
 				}
 			}
 
@@ -85,38 +85,38 @@ public class Node<T> {
 
 	}
 
-	public void preOrden(Collection<T> coleccion) {
-		coleccion.add(element);
+	public void preOrden(Collection<T> colection) {
+		colection.add(element);
 		if (sons != null) {
 			for (int i = 0; i < sons.size(); i++) {
-				sons.get(i).preOrden(coleccion);
+				sons.get(i).preOrden(colection);
 			}
 		}
 
 	}
 
 	public int size() {
-		int retorno = 1;
+		int exit = 1;
 		if (sons != null) {
 			for (int i = 0; i < sons.size(); i++) {
-				retorno += sons.get(i).size();
+				exit += sons.get(i).size();
 			}
 		}
 
-		return retorno;
+		return exit;
 	}
 
 	public int height() {
-		int retorno = 1;
+		int exit = 1;
 		if (sons != null) {
 			int max = 0;
 			for (int i = 0; i < sons.size(); i++) {
-				int altura = sons.get(i).height();
-				max = Math.max(max, altura);
+				int height = sons.get(i).height();
+				max = Math.max(max, height);
 			}
-			retorno += max;
+			exit += max;
 		}
-		return retorno;
+		return exit;
 	}
 	
 }
