@@ -1,6 +1,6 @@
 package interfaces;
 
-public interface NodeAvl<K extends Comparable<K>,T> extends NodeBB<K, T>{
+public interface INodeAvl<K extends Comparable<K>,T> extends INodeBB<K, T>{
 
 	public static final int WEIGHT_LEFT=1;
 	public static final int WEIGHT_RIGHT=-1;
