@@ -1,5 +1,6 @@
 package wolrd;
+import interfaces.*;
 
-public class NodeAvl {
+public class NodeAvl{
 
 }

@@ -1,6 +1,6 @@
 package interfaces;
 
-public interface INodeBR<K extends Comparable<K>,T> extends INodeBB<K, T>{
+public interface NodeBRJD<K extends Comparable<K>,T> extends NodeBBJD<K, T>{
 	
 	public static char COLOR_BLACK='b';
 	public static char COLOR_RED='r';
