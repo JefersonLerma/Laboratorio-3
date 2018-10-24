@@ -14,7 +14,6 @@ public class Main extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(new BorderLayout());
 		
-		
 	}
 	
 	
