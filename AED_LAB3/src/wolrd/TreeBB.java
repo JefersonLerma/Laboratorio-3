@@ -93,35 +93,7 @@ public class TreeBB<K extends Comparable<K>, T> implements TreeJD<K, T> {
 		return ret;
 	}
 	
-//	public static void main(String[] args) {
-//		ArbolBB<Integer, Integer>ar=new ArbolBB<>();
-//		int[ ] a={4,2,8,7,5,9,6};
-//		for (int i = 0; i < a.length; i++) {
-//			ar.add(a[i],a[i]);
-//
-//		}
-//		System.out.println("Tamaño "+ar.size());
-//		System.out.println("altura "+ar.height());
-//
-//		Collection<Integer> lis=new ArrayList<Integer>();
-//		ar.inOrden(lis);
-//		for (int i = 0; i <lis.size(); i++) {
-//			System.out.println(((ArrayList<Integer>) lis).get(i));
-//		}
-//		int delete=8;
-//		System.out.println("Se elimino "+delete);
-//		ar.delete(delete);
-//		System.out.println("Tamaño "+ar.size());
-//		System.out.println("altura "+ar.height());
-//
-//
-//		lis=new ArrayList<Integer>();
-//
-//		ar.inOrden(lis);
-//		for (int i = 0; i <lis.size(); i++) {
-//			System.out.println(((ArrayList<Integer>) lis).get(i));
-//		}
-//	}
+
 
 	@Override
 	public void posOrder(Collection<T> collection) {
