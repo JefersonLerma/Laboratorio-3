@@ -88,6 +88,35 @@ public class TreeAvl<K extends Comparable<K>,T> extends TreeBR<K, T> implements 
 		
 	}
 
-	
+	@Override
+	public void delete(K key) {
+		
+		NodeAvlJD<K,T> m=(NodeAvlJD<K,T>)(getRaiz()!=null?getRaiz().searchNode(key):null);
+		if(m!=null){
+			int s=size();
+			NodeAvlJD<K,T> suc=null;
+			if(m.isLeaf()){
+				suc=(NodeAvlJD<K, T>) m.getSupe();
+			}else{
+				if(m.getRight()!=null&&m.getLeft()!=null){
+					suc=(NodeAvlJD<K,T>)(m.getRight()!=null?m.getRight().getMin():m.getRight()); 
+
+				}else{
+					suc=(NodeAvlJD<K,T>)(m.getRight()!=null?m.getRight():m.getLeft());
+				}
+				
+
+			}
+			suc=!m.isLeaf()?(NodeAvlJD<K, T>) suc.getSupe():suc;
+			delete(m);
+			
+			fixAfterDeletion(suc);
+			if(getRaiz()!=null){
+				getRaiz().setSize(s-1);
+			}
+			
+		}
+		
+	}
 	
 }
