@@ -57,5 +57,37 @@ public class TreeAvl<K extends Comparable<K>,T> extends TreeBR<K, T> implements 
 		
 	}	
 	
+	@Override
+	public void fixAfterDeletion(NodeBBJD<K, T> n) {
+		
+		NodeAvlJD<K, T> x=(NodeAvlJD<K, T>)n;
+		if(x!=null){
+			((NodeAvlJD<K,T>) getRaiz()).asignFactors();
+
+			if(x.getFactor()<NodeAvlJD.WEIGHT_RIGHT){
+				if(x.getRight().getLeft()!=null){
+					rotateRight(x.getRight());
+
+
+				}
+				rotateLeft(x);
+
+			}else if(x.getFactor()>NodeAvlJD.WEIGHT_LEFT){
+				if(x.getLeft().getRight()!=null){
+					rotateLeft(x.getLeft());
+
+
+				}
+				rotateRight(x);
+			}
+			fixAfterDeletion(x.getSupe());
+
+
+		}
+
+		
+	}
+
+	
 	
 }
