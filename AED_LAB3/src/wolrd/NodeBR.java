@@ -6,8 +6,6 @@ import interfaces.*;
 
 public class NodeBR<K extends Comparable<K>,T> extends NodeBB<K, T> implements NodeBRJD<K, T> {
 
-	
-	
 	private char color;
 	public NodeBR( K key,T element) {
 		super(key, element);
@@ -21,7 +19,7 @@ public class NodeBR<K extends Comparable<K>,T> extends NodeBB<K, T> implements N
 	public void setColor(char color) {
 		this.color = color;
 	}
-	private int verificarI(){
+	private int checkI(){
 		int ret=0;
        if(isLeaf()){
     	   
@@ -35,10 +33,10 @@ public class NodeBR<K extends Comparable<K>,T> extends NodeBB<K, T> implements N
 		
 		return ret;
 	}
-	public boolean verificar(){
+	public boolean check(){
 		boolean ret=false;
 		if(isLeaf()){
-			verificarI();
+			checkI();
 		}else{
 			
 		}
