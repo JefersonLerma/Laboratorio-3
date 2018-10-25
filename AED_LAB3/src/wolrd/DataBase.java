@@ -20,7 +20,12 @@ public class DataBase {
 	private TreeBR<Integer, Player> playersBR;
 	private TreeAvl<Integer, Player> playersAVL;
 	
-	
+	public DataBase() {
+		// TODO Auto-generated constructor stub
+		
+		playersAVL = null;
+		playersBR = null;
+	}
 	
 	
 	
@@ -43,12 +48,11 @@ public class DataBase {
                 playersAVL.add(data[0].hashCode(), toAdd);
                 playersBR.add(data[0].hashCode(), toAdd);
 		
-				
+			
 			}
 			
 			
 		}
-		System.out.println("siza");
 		
 	}
 }
