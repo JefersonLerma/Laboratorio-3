@@ -1,5 +1,4 @@
-package wolrd;
-
+package world;
 import java.util.ArrayList;
 import java.util.Collection;
 

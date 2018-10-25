@@ -1,5 +1,4 @@
-package wolrd;
-
+package world;
 import interfaces.*;
 
 public class TreeAvl<K extends Comparable<K>,T> extends TreeBR<K, T> implements TreeBalancedJD<K, T> {

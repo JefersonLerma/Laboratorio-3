@@ -4,7 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.ScrollPane;
 import java.io.IOException;
 
-import wolrd.*;
+import world.*;
 
 import javax.swing.JFrame;
 
