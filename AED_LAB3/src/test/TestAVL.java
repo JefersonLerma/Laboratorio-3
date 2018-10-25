@@ -1,4 +1,4 @@
-package test;
+	package test;
 import java.util.ArrayList;
 import world.*;
 import java.util.Arrays;
@@ -45,5 +45,12 @@ public class TestAVL extends TestCase {
 		}
 		
 	}
+		public void testSearch(){
+				stage1();
+				assertTrue(avl.search(23)==23);
+			}
+		
+		
+		
 }
 
