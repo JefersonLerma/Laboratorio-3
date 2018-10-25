@@ -20,7 +20,7 @@ public class DataPanel extends JPanel{
 		main = pMain;
 		tam = 2;
 		dataPlayers = new JTextField[COLUMNS];
-		setBorder(new TitledBorder("Informacion Jugadores"));
+		setBorder(new TitledBorder("Información Jugadores"));
 		setLayout(new GridLayout(tam, COLUMNS));
 		panelAux1 = new JPanel();
 		panelAux2 = new JPanel();

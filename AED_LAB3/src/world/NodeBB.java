@@ -1,4 +1,4 @@
-package wolrd;
+package world;
 
 import interfaces.*;
 import java.util.*;

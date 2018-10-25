@@ -1,4 +1,4 @@
-package wolrd;
+package world;
 
 import java.util.Collection;
 
