@@ -16,7 +16,7 @@ public class TreeABB extends TestCase {
 		testTree = new TreeBB<>();
 
 		for (int i = 0; i < arreglo.length; i++) {
-			testTree.add(arreglo[i], arreglo[i]); // key, pero de atributo MIRAAAAAAAAAAAAAAR
+			testTree.add(arreglo[i], arreglo[i]); //
 
 		}
 	}
@@ -52,6 +52,7 @@ public class TreeABB extends TestCase {
 		testTree.inOrder(lis);
 		for (int i = 0; i < arreglo.length; i++) {
 			assertTrue(arreglo[i]==lis.get(i));
+			
 		}
 	}
 
