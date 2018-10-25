@@ -9,21 +9,21 @@ import javax.swing.JFrame;
 
 public class Main extends JFrame{
 	
-	private DataBase xd;
+	private DataBase world;
 	public Main() {
 		// TODO Auto-generated constructor stub
 		setTitle("Players");
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(new BorderLayout());
-		xd = new DataBase();
-		
+		world = new DataBase();
 		try {
-			xd.fileUpload();
+			world.fileUpload();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	
 	}
 	
 	

@@ -9,7 +9,7 @@ import interfaces.*;
 public class DataBase {
 	
     //data path
-	public final static String FILE_PATH = "./data/Players/x.txt";
+	public final static String FILE_PATH = "./data/Players/NBA_DATA.csv";
 	// Selected statistical criteria
 	public final static String TRUE_SHOOTING_PERCENTAGE = "TS%";
 	public final static String OFFENSIVE_REBOUND_PERCENTAGE = "ORB%";
@@ -32,25 +32,23 @@ public class DataBase {
 		FileReader fr = new FileReader(file);
 		BufferedReader br = new BufferedReader(fr);
 		String a = "";
-		
+		int contador = 0;
 		while (((a = br.readLine()) != null) && a.trim().length() != 0)  {
+			
 			if (!a.startsWith("Year")) {
+				contador ++;
 				String [] data  = a.split(",");
-				System.out.println(data[2]);
-				System.out.println(data[3]);
-				System.out.println(data[1]);
-				System.out.println(data[7]);
-				System.out.println(data[11]);
-				System.out.println(data[12]);
-				System.out.println(data[13]);
-				System.out.println(data[14]);
-				
-				
+				System.out.println(contador+"" + " - " +data[2] +" "+ data[3]+ " "+data[1] + " " + data[7] + " " + data[11] + " " + data[12] + " " + data[13] + " " + data[14]);
+                Player toAdd = new Player(data[2], Integer.parseInt(data[3]), data[1], Double.parseDouble(data[7]), Double.parseDouble(data[11]), Double.parseDouble(data[12]), Double.parseDouble(data[13]), Double.parseDouble(data[14]));
+                playersAVL.add(data[0].hashCode(), toAdd);
+                playersBR.add(data[0].hashCode(), toAdd);
+		
 				
 			}
 			
 			
 		}
+		System.out.println("siza");
 		
 	}
 }
