@@ -8,9 +8,10 @@ import interfaces.TreeJD;
 
 public class TreeBB<K extends Comparable<K>, T> implements TreeJD<K, T> {
 	private NodeBBJD<K, T> root;
+	private String preOrder;
 
 	public TreeBB() {
-
+    preOrder = "";
 	}
 
 
@@ -100,6 +101,7 @@ public class TreeBB<K extends Comparable<K>, T> implements TreeJD<K, T> {
 			if(collection!=null){
 		if(root!=null){
 			root.posOrder(collection);
+			
 		}
 	}
 		

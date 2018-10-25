@@ -56,7 +56,7 @@ public class PanelButton extends JPanel implements ActionListener{
 		eliminar.addActionListener(this);
 		eliminar.setActionCommand(DELETE);
 		
-		agregar = new JButton("Buscar");
+		agregar = new JButton("Agregar");
 		agregar.addActionListener(this);
 		agregar.setActionCommand(SEARCH);
 		
@@ -118,13 +118,22 @@ public class PanelButton extends JPanel implements ActionListener{
 		// TODO Auto-generated method stub
 		String event = e.getActionCommand();
 		
-		if(event.equals(SEARCH)) {
-			
-			main.changeTam(Integer.parseInt(JOptionPane.showInputDialog(null, "ingrese n")));
-		
-			
-		}else if(event.equals(LOAD)) {
+		 if(event.equals(LOAD)) {
 			main.loadFile();
+		}else if(event.equals(SEARCH)) {
+			if(main.isLoad()) {
+				if(opc1.isSelected()) {
+					if(!txtPorDebajoDe.getText().equals("")) {
+						
+					}else {
+						
+					}
+				}
+				
+				
+			}else {
+				JOptionPane.showMessageDialog(null, "!Debes cargar el archivo primero, con la opcion Cargar Archivo¡");
+			}
 		}
 	}
 

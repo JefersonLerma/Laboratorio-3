@@ -48,7 +48,7 @@ public class Main extends JFrame{
 	
 	public void loadFile() {
 		try {
-			JOptionPane.showMessageDialog(null, "Espera entre 15 y 20 segundos, mientras se carga el volumen de los datos \n se desplegara un mensaje cuando estos esten listos.");
+			JOptionPane.showMessageDialog(null, "Espera entre 30 y 45 segundos, mientras se carga el volumen de los datos \n se desplegara un mensaje cuando estos esten listos. Por defecto Se cargaran 42000 archivos en 3 arboles.");
 			world.fileUpload();
 			JOptionPane.showMessageDialog(null, "!Se cargo satisfactoriamente¡");
 		} catch (IOException e) {
@@ -58,6 +58,14 @@ public class Main extends JFrame{
 		}
 	}
 	
+	public String SearchForTS(double n) {
+		String x = "";
+		
+		return x;
+	}
 	
+	public boolean isLoad() {
+		return world.isLoad();
+	}
 
 }
