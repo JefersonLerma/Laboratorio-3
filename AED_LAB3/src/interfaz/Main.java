@@ -3,7 +3,6 @@ package interfaz;
 import java.awt.BorderLayout;
 import java.awt.ScrollPane;
 import java.io.IOException;
-
 import javax.swing.JFrame;
 
 import world.*;
