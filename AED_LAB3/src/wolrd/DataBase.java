@@ -40,10 +40,10 @@ public class DataBase {
 				System.out.println(data[3]);
 				System.out.println(data[1]);
 				System.out.println(data[7]);
-				System.out.println(data[9]);
-				System.out.println(data[10]);
+				System.out.println(data[11]);
 				System.out.println(data[12]);
 				System.out.println(data[13]);
+				System.out.println(data[14]);
 				
 				
 				
