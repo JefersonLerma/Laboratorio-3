@@ -1,4 +1,5 @@
 package wolrd;
+import interfaces.*;
 
 public class DataBase {
 	
@@ -10,6 +11,8 @@ public class DataBase {
 	public final static String DEFENSIVE_REBOUND_PERCENTAGE = "DRB%";
 	public final static String TOTAL_REBOUND_PERCENTAGE = "TRB%";
 	public final static String ASSIST_PERCENTAGE = "ATS%";
+	
+	
 	
 	
 }
