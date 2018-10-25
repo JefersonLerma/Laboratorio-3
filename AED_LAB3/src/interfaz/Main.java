@@ -11,24 +11,24 @@ import javax.swing.JFrame;
 public class Main extends JFrame{
 	
 	private DataBase world;
-	private int quantity;
+	
 	private DataPanel dataPanel;
-	private ScrollPane scroll;
+	private PanelButton panelButton;
+
 	
 	public Main() {
 		// TODO Auto-generated constructor stub
 		dataPanel = new DataPanel(this);
-		quantity = 2;
+		panelButton = new PanelButton(this);
+	
 		setTitle("Players");
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(new BorderLayout());
 		world = new DataBase();
-		scroll = new ScrollPane();
-		scroll.add(dataPanel);
-		add(scroll, BorderLayout.CENTER);
-	//   add(dataPanel, BorderLayout.SOUTH);
-	   setSize(1100, 200);
+	    add(dataPanel, BorderLayout.CENTER);
+	    add(panelButton, BorderLayout.SOUTH);
+	    setSize(1100, 300);
 	
 	}
 	
@@ -38,13 +38,12 @@ public class Main extends JFrame{
 	}
 
 
-	public int getQuantity() {
-		return quantity;
-	}
-
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
+	public void changeTam(int n) {
+		
+		dataPanel.setTam(n);
+		
+		dataPanel.updateUI();
+		dataPanel.xd();
 	}
 	
 	

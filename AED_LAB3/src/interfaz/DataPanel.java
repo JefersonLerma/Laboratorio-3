@@ -14,16 +14,18 @@ public class DataPanel extends JPanel{
 	private Main main;
 	private JPanel panelAux1;
 	private JPanel panelAux2;
+	private int tam;
 	
 	public DataPanel(Main pMain) {
 		main = pMain;
+		tam = 2;
 		dataPlayers = new JTextField[COLUMNS];
 		setBorder(new TitledBorder("Informacion Jugadores"));
-		setLayout(new GridLayout(2, COLUMNS));
+		setLayout(new GridLayout(tam, COLUMNS));
 		panelAux1 = new JPanel();
 		panelAux2 = new JPanel();
-		panelAux1.setLayout(new GridLayout(main.getQuantity(), COLUMNS));
-		panelAux2.setLayout(new GridLayout(main.getQuantity(), COLUMNS));
+		panelAux1.setLayout(new GridLayout(1, COLUMNS));
+		panelAux2.setLayout(new GridLayout(1, COLUMNS));
 		 JLabel fact0 = new JLabel("Nombre");
 		 JLabel fact1 = new JLabel("Edad");
 		 JLabel fact2 = new JLabel("Equipo");
@@ -41,17 +43,29 @@ public class DataPanel extends JPanel{
 		 panelAux1.add(fact6);
 		 panelAux1.add(fact7);
 		 
+		xd();
+		 
+		 add(panelAux1);
+		 add(panelAux2);
+		
+	}
+
+	public void xd () {
 		 for(int i = 0; i<dataPlayers.length; i++) {
 			 JTextField txt = new JTextField("");
 			 txt.setEditable(false);
 			 dataPlayers[i] = txt;
 			 panelAux2.add(dataPlayers[i]);
 		 }
-		 
-		 add(panelAux1);
-		 add(panelAux2);
-		 
-		
 	}
+	public int getTam() {
+		return tam;
+	}
+
+	public void setTam(int tam) {
+		this.tam = tam;
+	}
+	
+	
 
 }
