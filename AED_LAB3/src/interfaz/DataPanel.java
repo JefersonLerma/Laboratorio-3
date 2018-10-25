@@ -1,9 +1,13 @@
 package interfaz;
 
+import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.GridLayout;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
@@ -15,13 +19,20 @@ public class DataPanel extends JPanel{
 	private JPanel panelAux1;
 	private JPanel panelAux2;
 	private int tam;
+    private JTextArea area;
+    private JScrollPane scroll;
 	
 	public DataPanel(Main pMain) {
+		
+		area = new JTextArea();
+		scroll = new JScrollPane(area);
+	
+	   
 		main = pMain;
 		tam = 2;
 		dataPlayers = new JTextField[COLUMNS];
 		setBorder(new TitledBorder("Información Jugadores"));
-		setLayout(new GridLayout(tam, COLUMNS));
+		setLayout(new BorderLayout());
 		panelAux1 = new JPanel();
 		panelAux2 = new JPanel();
 		panelAux1.setLayout(new GridLayout(1, COLUMNS));
@@ -42,11 +53,11 @@ public class DataPanel extends JPanel{
 		 panelAux1.add(fact5);
 		 panelAux1.add(fact6);
 		 panelAux1.add(fact7);
+		 panelAux2.add(scroll);
+	  
 		 
-		xd();
-		 
-		 add(panelAux1);
-		 add(panelAux2);
+		 add(panelAux1, BorderLayout.NORTH);
+		 add(panelAux2, BorderLayout.CENTER);
 		
 	}
 

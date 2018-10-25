@@ -28,7 +28,7 @@ public class Main extends JFrame{
 		world = new DataBase();
 	    add(dataPanel, BorderLayout.CENTER);
 	    add(panelButton, BorderLayout.SOUTH);
-	    setSize(1100, 300);
+	    setSize(1100, 500);
 	
 	}
 	
