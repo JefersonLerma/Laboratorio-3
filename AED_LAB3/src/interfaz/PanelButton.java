@@ -123,6 +123,8 @@ public class PanelButton extends JPanel implements ActionListener{
 			main.changeTam(Integer.parseInt(JOptionPane.showInputDialog(null, "ingrese n")));
 		
 			
+		}else if(event.equals(LOAD)) {
+			main.loadFile();
 		}
 	}
 

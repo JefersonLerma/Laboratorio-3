@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+import javax.swing.JOptionPane;
+
 import interfaces.*;
 
 public class DataBase {
@@ -19,12 +21,14 @@ public class DataBase {
 	
 	private TreeBR<Integer, Player> playersBR;
 	private TreeAvl<Integer, Player> playersAVL;
+	private boolean isLoad;
 	
 	public DataBase() {
 		// TODO Auto-generated constructor stub
 		
 		playersAVL = null;
 		playersBR = null;
+		isLoad = false;
 	}
 	
 	
@@ -43,7 +47,6 @@ public class DataBase {
 			if (!a.startsWith("Year")) {
 				contador ++;
 				String [] data  = a.split(",");
-				System.out.println(contador+"" + " - " +data[2] +" "+ data[3]+ " "+data[1] + " " + data[7] + " " + data[11] + " " + data[12] + " " + data[13] + " " + data[14]);
                 Player toAdd = new Player(data[2], Integer.parseInt(data[3]), data[1], Double.parseDouble(data[7]), Double.parseDouble(data[11]), Double.parseDouble(data[12]), Double.parseDouble(data[13]), Double.parseDouble(data[14]));
                 playersAVL.add(data[0].hashCode(), toAdd);
                 playersBR.add(data[0].hashCode(), toAdd);
@@ -53,6 +56,20 @@ public class DataBase {
 			
 			
 		}
-		
+		isLoad = true;
 	}
+
+
+
+	public boolean isLoad() {
+		return isLoad;
+	}
+
+
+
+	public void setLoad(boolean isLoad) {
+		this.isLoad = isLoad;
+	}
+	
+	
 }

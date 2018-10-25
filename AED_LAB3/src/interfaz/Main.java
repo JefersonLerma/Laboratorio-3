@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.ScrollPane;
 import java.io.IOException;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 import world.*;
 
@@ -45,7 +46,17 @@ public class Main extends JFrame{
 		dataPanel.xd();
 	}
 	
-	
+	public void loadFile() {
+		try {
+			JOptionPane.showMessageDialog(null, "Espera entre 15 y 20 segundos, mientras se carga el volumen de los datos \n se desplegara un mensaje cuando estos esten listos.");
+			world.fileUpload();
+			JOptionPane.showMessageDialog(null, "!Se cargo satisfactoriamente¡");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			JOptionPane.showMessageDialog(null, "!No se enconto el Archivo¡");
+		}
+	}
 	
 	
 
