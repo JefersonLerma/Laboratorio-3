@@ -58,7 +58,7 @@ public class Main extends JFrame{
 		}
 	}
 	
-	public String SearchForTS(double n) {
+	public String SearchForTS(double n, int p) {
 		String x = "";
 		
 		return x;

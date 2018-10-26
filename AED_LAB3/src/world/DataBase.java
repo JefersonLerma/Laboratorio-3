@@ -3,6 +3,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
@@ -92,9 +93,11 @@ public class DataBase {
 	}
 	
 	
-   public String SearchTS(double n) {
-	   
-   }
+  public void searchTs(double x, int y) {
+	 Player xd = playersBRTS.getRaiz().getElement();
+	 
+	
+  }
 
 
 	public void setLoad(boolean isLoad) {

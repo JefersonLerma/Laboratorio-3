@@ -124,7 +124,7 @@ public class PanelButton extends JPanel implements ActionListener{
 			if(main.isLoad()) {
 				if(opc1.isSelected()) {
 					if(!txtPorDebajoDe.getText().equals("")) {
-						
+				//		main.SearchForTS(1.0);
 					}else {
 						
 					}
